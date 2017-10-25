@@ -14,7 +14,7 @@ class MediaDetailsPage: BasePage {
     private var doneButton: XCUIElement!
     
     override var Trait: XCUIElement! {
-        return app.staticTexts["Properties"]
+        return app.navigationBars["Properties"]
     }
     
     @discardableResult

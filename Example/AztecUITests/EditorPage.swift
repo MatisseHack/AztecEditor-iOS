@@ -41,7 +41,7 @@ class EditorPage: BasePage {
     private var mediaDetailsButton: XCUIElement!
     
     override var Trait: XCUIElement! {
-        return app.navigationBars["Root View Controller"].buttons["Root View Controller"]
+        return app.navigationBars["AztecExample.EditorDemo"]
     }
     
     @discardableResult

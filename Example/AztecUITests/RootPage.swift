@@ -15,7 +15,7 @@ class RootPage: BasePage {
     private var emptyEditorDemo: XCUIElement!
     
     override var Trait: XCUIElement! {
-        return app.navigationBars["Root View Controller"].staticTexts["Root View Controller"]
+        return app.navigationBars["Root View Controller"]
     }
     
     @discardableResult

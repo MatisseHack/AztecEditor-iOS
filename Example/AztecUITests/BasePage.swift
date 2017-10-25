@@ -27,21 +27,11 @@ class BasePage {
         MCLabel.labelStep("On Page " + pageName)
     }
     
-    func waitForElement(_ element: XCUIElement,  timeout: Double = 5) {
-        
-        let testCase = XCTestCase()
-        let exists:NSPredicate = NSPredicate.init(format:"exists == true")
-        
-        testCase.expectation(for: exists, evaluatedWith: element, handler: nil)
-        testCase.waitForExpectations(timeout: TimeInterval(timeout), handler: nil)
-    }
-    
     func waitForPage() {
-        
         if Trait == nil {
             fatalError("Trait not set for " + pageName)
         }
         
-        waitForElement(Trait)
+        XCTAssertTrue(Trait.waitForExistence(timeout: 30))
     }
 }

@@ -23,7 +23,7 @@ class PhotosPage: BasePage {
         super.init()
         
         cancelButton = app.buttons["Cancel"]
-        cameraRollButton = app.buttons["Camera Roll"]
+        cameraRollButton = app.cells["Camera Roll"]
     }
     
     func chooseCameraRoll() {
